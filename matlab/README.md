@@ -1,0 +1,10 @@
+# Convex Optimization for PEAs
+MATLAB Code for Convex Optimization for Spring Design of Parallel Elastic Actuators.
+
+"main_NonlinearPEA" serves as the main function for convex optimization for PEAs. In the first section, users can define motion task and PEA parameters, and perform convex optimizations under such task and parameters to get global optimal linear and nonlinear PEA designs. Users can also generate figures of torque-elongation profile and the time history of motor torque. In the second section, users can run the Monte Carlo simulation for rigid actuator under the defined motion task and PEA parameters. Users can also get the mean value and standard deviation of motor energy consumption. Similar to the second section, in the third and fourth section, users can run the Monte Carlo simulation for linear and nonlinear PEA under the defined motion task and PEA parameters, respectively. In the fifth section, if wanted, users can also run a convergence test for the Monte Carlo simulation by calling "mc_convergence_test".
+
+"mc_convergence_test" serves as the function for the convergence test for the Monte Carlo simulation of the motor energy consumptions in imperfect tracking cases. Users should call this function after acquiring global optimal designs of linear and nonlinear PEAs (from the first section of "main_NonlinearPEA").
+
+"Optimal_PEA_Toolbox/AuxiliaryFunctions/load_PEA_Parameters" serves as the function for loading the PEA parameters. As a default, six sets of motor parameters are pre-defined in this function: 'EC45', 'EC30', 'ILM85x26', 'ILM70x8', 'ILM85x04', 'ActPackDephy'. If wanted, users can also adjust the motor parameters, or append new sets of motor parameters in this function, and call them from "main_NonlinearPEA".
+
+**Note**: If you need the folder "1_InputData_BiomechanicDatasets", you can unzip "1_InputData_BiomechanicDatasets.zip" in "Optimal_PEA_Toolbox/", or download it from [here](https://www.dropbox.com/sh/nhx6fm7hc90vyc2/AADU6uysXJiEC0d-t0Ke9A6sa?dl=0) and approximate them into periodic trajectories using "Optimal_PEA_Toolbox/ScriptsToGenerateTrajectories/main_generatePeriodicTrajectories".

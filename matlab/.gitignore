@@ -1,0 +1,10 @@
+*.mat
+*.fig
+*.lp
+*.tex
+*.dat
+*.asv
+*.eps
+Optimal_SEA_Toolbox/1_InputData_BiomechanicDatasets/
+OutputData/
+.DS_Store
